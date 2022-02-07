@@ -2,7 +2,9 @@
 # ; 各単語の（アルファベットの）文字数を先頭から出現順に並べたリストを作成せよ．
 
 def solution(s):
-   
+    # スペースで分ける
+    l = s.split()
+    return l
 
 def main():
     print(solution("Now I need a drink, alcoholic of course, after the heavy lectures involving quantum mechanics"))
