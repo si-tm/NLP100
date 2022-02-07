@@ -1,3 +1,3 @@
-# NLP100
+## NLP100
 
-[https://nlp100.github.io/ja/](言語処理100本ノック)
+[言語処理100本ノック](https://nlp100.github.io/ja/)
