@@ -11,12 +11,21 @@ def n_gram(lst, n):
         ans_lst.append(str)
     return ans_lst
 
+def n_gram_string(lst, n):
+    ans_lst = []
+    for i in range(len(lst) - n + 1):
+        str = ""
+        for j in range(n):
+            str += lst[i + j]
+        ans_lst.append(str)
+    return ans_lst
+
 # 単語n-gram
 def solution_word(s, n):
     lst = l03.solution(s)
     return n_gram(lst, n)
 
-#文字n-gram
+#文字n-gram 二次元配列
 def solution_letter(s, n):
     lst_w = l03.solution(s)
     lst_l = []
@@ -24,6 +33,16 @@ def solution_letter(s, n):
         for i in range(len(l)):
             lst_l.append(l[i])
     return n_gram(lst_l, n)
+
+
+#文字n-gram 文字列配列
+def solution_letter_string(s, n):
+    lst_w = l03.solution(s)
+    lst_l = []
+    for l in lst_w:
+        for i in range(len(l)):
+            lst_l.append(l[i])
+    return n_gram_string(lst_l, n)
 
 def main():
     print(solution_word("I am an NLPer", 2))
